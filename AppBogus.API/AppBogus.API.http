@@ -1,0 +1,6 @@
+@AppBogus.API_HostAddress = http://localhost:5143
+
+GET {{AppBogus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
