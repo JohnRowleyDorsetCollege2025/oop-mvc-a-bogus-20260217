@@ -6,11 +6,16 @@ namespace AppBogus.MVC.Controllers
 {
     public class PeopleController : Controller
     {
+        private FakeDataService _fs;
+        public PeopleController(FakeDataService fs)
+        {
+             _fs = fs;
+        }
         public IActionResult Index()
         {
-            FakeDataService fs = new FakeDataService(); 
 
-            return View(fs.GetPeople());
+
+            return View(_fs.GetPeople());
         }
     }
 }

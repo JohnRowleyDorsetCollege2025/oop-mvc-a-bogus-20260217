@@ -7,7 +7,8 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
+            <th>City</th>
+            <th>DOB</th>
         </tr>
     </thead>
     <tbody>
@@ -15,8 +16,9 @@
         {
             <tr>
                 <td>@person.FullName</td>
-                <td>@person.Email</td>
+                <td>@person.Email.ToLower()</td>
                 <td>@person.City</td>
+                <td>@person.DateOfBirth.ToString("yyyy-MM-dd")</td>
             </tr>
         }
     </tbody>

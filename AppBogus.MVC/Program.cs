@@ -1,7 +1,12 @@
+using AppBogus.Domain.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Inject the FakeDataService as a singleton so that it is shared across the application and retains the same data.
+builder.Services.AddSingleton<FakeDataService>();
 
 var app = builder.Build();
 
